@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>论坛网站-注册</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="login.js"></script>
+</head>
+
+<body>
+  <section id="register-section">
+    <h2>注册</h2>
+    <form id="register-form">
+      <input type="text" id="getname" placeholder="用户名" required>
+      <input type="password" id="getpassword" placeholder="密码" required>
+      <button type="button" onclick="register()">注册</button>
+      <div class="error_box" id="error_box"></div>
+    </form>
+    <div>已有账号？<a href="login.html">登录</a></div>
+  </section>
+</body>
+
+</html>

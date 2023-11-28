@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>论坛网站</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <script>
+    window.onload=function(){
+      if(localStorage.getItem("nowuser")==null){
+        alert("请先登录");
+        location.href="login.html";
+      }
+    }
+  </script>
+  <section>
+    <h2>
+      论坛网站
+    </h2>
+  </section>
+  <section>
+    
+  </section>
+</body>
+
+</html>
