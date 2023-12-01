@@ -6,24 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>论坛网站</title>
   <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="posts.js"></script>
 </head>
 
-<body>
-  <script>
-    window.onload=function(){
-      if(localStorage.getItem("nowuser")==null){
-        alert("请先登录");
-        location.href="login.html";
-      }
-    }
-  </script>
+<body onload="loadpost();">
   <section>
     <h2>
       论坛网站
     </h2>
   </section>
+  <div id="postinfo" class="showpost">
+  </div>
   <section>
-    
+    <form id="form">
+      <textarea id="comment" rows="3" cols="20" style="resize: none;" placeholder="评论" required></textarea>
+      <button type="button" onclick="newcomment()">发射评论！</button>
+      <div class="error_box" id="error_box"></div>
+    </form>
   </section>
 </body>
 

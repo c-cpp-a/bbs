@@ -6,19 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>论坛网站</title>
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <script src="posts.js" />
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.js"></script>
+  <script src="posts.js"></script>
 </head>
 
-<body>
-  <script>
-    window.onload=function(){
-      if(localStorage.getItem("nowuser")==null){
-        alert("请先登录");
-        location.href="login.html";
-      }
-      load();
-    }
-  </script>
+<body onload="load();">
   <section>
     <h2>
       论坛网站
@@ -28,7 +20,7 @@
     <h2>
       帖子
     </h2>
-    <div id="showpost" onload=showposts()>
+    <div id="showpost">
 
     </div>
   </section>
@@ -37,7 +29,7 @@
     <h2>
       发帖
     </h2>
-    <form id="login-form">
+    <form id="form">
       <input type="text" id="title" placeholder="标题" required>
       <textarea id="content" rows="3" cols="20" style="resize: none;" placeholder="内容" required></textarea>
       <button type="button" onclick="newpost()">发布</button>
